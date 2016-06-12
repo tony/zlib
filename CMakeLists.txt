@@ -54,7 +54,7 @@ ADD_LIBRARY(zlib ${ZLIB_SRCS})
 # used when making a shared object; recompile with -fPIC
 # See http://www.cmake.org/pipermail/cmake/2007-May/014350.html
 #
-IF(CMAKE_SYSTEM_PROCESSOR STREQUAL "x86_64")
+IF(CMAKE_SYSTEM_PROCESSOR STREQUAL "x86_64" OR CMAKE_SYSTEM_PROCESSOR STREQUAL "amd64")
   SET_TARGET_PROPERTIES(zlib PROPERTIES COMPILE_FLAGS "-fPIC")
 ENDIF()
 
